@@ -1,0 +1,22 @@
+{
+  "name": "exp-node-concurrency",
+  "version": "0.0.0",
+  "description": "cpu intensive task with nodejs concurrency",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "worker": "jiti workers/worker.js",
+    "sandbox:worker": "jiti workers/sandboxed-worker.js",
+    "send": "jiti index.js",
+    "send:sandbox": "jiti index.js sandbox"
+  },
+  "author": "Fahim Faisal",
+  "license": "ISC",
+  "dependencies": {
+    "bullmq": "^5.1.8",
+    "dotenv": "^16.4.1"
+  },
+  "devDependencies": {
+    "jiti": "^1.21.0"
+  }
+}

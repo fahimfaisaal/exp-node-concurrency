@@ -1,0 +1,17 @@
+version: "3.7"
+
+services:
+  redis:
+    image: redis:7.0.4-alpine
+    restart: always
+    ports:
+      - "${REDIS_PORT}:6379"
+    command: redis-server --save 20 1 --loglevel warning --requirepass ${REDIS_PASS}
+    volumes:
+      - redis:/data
+    labels:
+      logging: "promtail"
+      logging_jobname: "redis_docker"
+
+volumes:
+  redis: null
