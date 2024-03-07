@@ -2,7 +2,7 @@ import { Worker } from "bullmq";
 import path from "path";
 import { CONNECTION, CONCURRENCY } from "../constants";
 
-const sandboxProcess = path.join(__dirname, "sandbox-task.js")
+const sandboxProcess = path.join(__dirname, "task.js")
 
 const worker = new Worker("sandboxed-queue", sandboxProcess, {
   connection: CONNECTION,

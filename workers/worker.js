@@ -1,8 +1,8 @@
 import { Worker } from "bullmq";
-import { task } from "./sandbox-task";
+import processor from "./task";
 import { CONNECTION, CONCURRENCY as concurrency} from "../constants";
 
-const worker = new Worker("queue", (job) => task(job.name, job.data.length), {
+const worker = new Worker("queue", processor, {
   connection: CONNECTION,
   autorun: false,
   concurrency,
