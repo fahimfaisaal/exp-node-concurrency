@@ -11,7 +11,7 @@ const worker = new Worker("sandboxed-queue", sandboxProcess, {
 })
 
 worker.waitUntilReady().then(() => {
-  console.log("Sandboxed Worker is ready")
+  console.log("Sandboxed Worker is ready, on PID:", process.pid, "concurrency:", CONCURRENCY)
   worker.run()
 })
 

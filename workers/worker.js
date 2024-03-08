@@ -9,7 +9,8 @@ const worker = new Worker("queue", processor, {
 })
 
 worker.waitUntilReady().then(() => {
-  console.log("Worker is ready")
+  console.log("Worker is ready, on PID:", process.pid, "concurrency:", concurrency)
+
   worker.run()
 })
 
