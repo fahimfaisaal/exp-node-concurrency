@@ -1,4 +1,4 @@
-import { task } from "./workers/sandbox-task";
+import { task } from "./workers/task";
 
 const t1 = performance.now();
 task("task", 1e10);
