@@ -6,6 +6,7 @@ const worker = new Worker("queue", processor, {
   connection: CONNECTION,
   autorun: false,
   concurrency,
+  useWorkerThreads: true
 })
 
 worker.waitUntilReady().then(() => {
