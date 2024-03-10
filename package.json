@@ -5,8 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "worker": "jiti workers/worker.js",
-    "sandbox:worker": "jiti workers/sandboxed-worker.js",
+    "start:bull:worker": "jiti workers/worker.js",
+    "start:bull:sandbox:worker": "jiti workers/sandboxed-worker.js",
+    "start:worker:threads": "jiti multi-threading.js",
     "send": "jiti index.js",
     "send:sandbox": "jiti index.js sandbox",
     "start:server": "jiti server/index.js"
