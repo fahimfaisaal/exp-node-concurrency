@@ -1,4 +1,4 @@
-# exp-node-concurrency
+# Node Concurrency & Parallelism Experiment
 
 ## How to bootstrap
 
@@ -8,15 +8,15 @@ pnpm install
 docker compose up -d # to up the redis server for the bullmq
 ```
 
-## Run bullmq worker
+## Running the BullMQ Worker
 
-To run bullmq worker just run
+To start the BullMQ worker, use the following command:
 
 ```bash
 pnpm start:bull:worker
 ```
 
-### Sends jobs to worker
+### Sends jobs to the worker
 
 To send cpu intensive tasks
 
@@ -30,15 +30,15 @@ To send io tasks
 pnpm send io # every io send takes delay arg at last position of the command in ms. default 1000ms
 ```
 
-## Run bullmq sandbox worker
+## Running the BullMQ Sandbox Worker
 
-even it takes arg `threads` to run in node js worker thread instead multiple process
+The sandbox worker can utilize Node.js worker threads instead of multiple processes. To start it with threads argument, use:
 
 ```bash
 pnpm start:bull:worker threads
 ```
 
-### Sends jobs to sandbox worker
+### Sends jobs to the sandbox worker
 
 To send cpu intensive tasks
 
@@ -52,13 +52,15 @@ To send io tasks
 pnpm send:sandbox io
 ```
 
-## Run the server
+## Starting the Server
 
 ```bash
 pnpm start:server
 ```
 
-### Call server api for running io and cpu intensive task
+### Using the Server API
+
+The server API can be used to run I/O and CPU-intensive tasks.
 
 For CPU intensive tasks
 
