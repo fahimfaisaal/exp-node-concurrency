@@ -1,6 +1,6 @@
 import 'dotenv/config'
 
-export const CONCURRENCY = 3;
+export const CONCURRENCY = +process.env.CONCURRENCY || 3;
 
 export const CONNECTION = {
   host: process.env.REDIS_HOST,

@@ -8,7 +8,7 @@ const worker = new Worker("sandboxed-queue", sandboxProcess, {
   connection: CONNECTION,
   autorun: false,
   concurrency: CONCURRENCY,
-  useWorkerThreads: true
+  useWorkerThreads: process.argv.includes("threads")
 })
 
 worker.waitUntilReady().then(() => {
