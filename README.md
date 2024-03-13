@@ -33,8 +33,10 @@ pnpm send
 To send io tasks
 
 ```bash
-pnpm send io # every io send takes delay arg at last position of the command in ms. default 1000ms
+pnpm send io
 ```
+
+> Note: The io command accepts an optional delay argument (in milliseconds). The default delay is 1000ms.
 
 ## Running the BullMQ Sandbox Worker
 
