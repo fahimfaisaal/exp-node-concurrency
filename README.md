@@ -2,10 +2,16 @@
 
 ## How to bootstrap
 
+Install the project dependencies:
+
 ```bash
 pnpm install
-# and
-docker compose up -d # to up the redis server for the bullmq
+```
+
+Start the Redis server (used by BullMQ) using Docker:
+
+```bash
+docker compose up -d
 ```
 
 ## Running the BullMQ Worker
